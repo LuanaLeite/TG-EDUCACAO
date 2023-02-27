@@ -12,3 +12,8 @@ Para a primeira entrega do trabalho, reunimos os dados do censo de 2010 coletado
 Para a segunda entrega, foi entendido a necessidade de dados mais atuais para uma análise mais certeira. Os novos dados foram coletados da base do FNDE (https://www.fnde.gov.br/index.php/financiamento/fundeb/area-para-gestores/dados-estatisticos/item/13254-2020-com-base-na-portaria-interministerial-n%C2%BA-04,-de-27-12-2019). Desta vez, os dados foram baixados em pdf e convertidos em xls para serem limpos no excel - os dados foram conferidos para garantir que não houve alterações durante a conversão. Células que continham números e estavam em formato de texto foram modificados para 'número' e pontos (.) foram transformados em vírgulas (,) para uniformização dos dados. Por fim, os novos dados foram acrescentados a base antiga de dados para aperfeiçoar a análise.
 
 É importante destacar que, por mais que os novos dados sejam semelhantes aos dados antigos, julgamos diferenças suficientes neles para manter as duas bases no código. Por exemplo, enquanto a primeira base separava os individuos por idade, a nova base os separa por nível educacional.
+
+Para maior entendimento dos dados:
+Jovens - Indivíduos de até 19 anos;
+Adultos - Indivíduos com idade entre 20 até 59 anos;
+Idosos - Indivíduos de 60 anos em diante.
