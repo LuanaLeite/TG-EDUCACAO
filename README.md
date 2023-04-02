@@ -41,8 +41,10 @@ Entre as técnicas utilizadas na EDA no trabalho estão: estatística descritiva
 
 Por fim, a última etapa do trabalho consiste em aplicar os conceitos vistos na prática ao longo do semestre, como: seleção de modelos, regularização e reamostragem. Essa é uma importante etapa do projeto que serve para melhorar a precisão e o desempenho do modelos desenvolvido.
 
+A seleção de modelos consiste em escolher o modelo mais adequado para um determinado problema de negócio, considerando os dados disponíveis, essa etapa geralmente envolve o treinamento de modelos diferentes e a comparação de suas métricas de desempenho, sempre levando em consideração a relação entre acuracia e interpretabilidade para chegar em um modelo balanceado, já que não há um modelo ideal e padrão. Assim, para o nosso trabalho o modelo escolhido foi o de regressão, visto que as varáiveis que estamos analisando são quantitativas e este é o modelo mais utilizado.
 
+Já a reamostragem é uma técnica utilizada para extrair o máximo possível da amostra que temos disponível, sendo possível avaliar o desempenho de um modelo em dados que não foram usados para treiná-lo. Assim, é possóvel ter múltiplas performances da amostra para definir um modelo mais assertivo. Existem diferentes técnicas de reamostragem que permitem estimar a precisão do modelo em dados não observados, tais como: Cross-validation (Validation set, Leave-One-Out (LOOCV) e k-Fold) e Bootstrap. Vale ressaltar que a reamostragem também é utilizada  para ajustar hiperparâmetros do modelo.
 
-
+Por fim, a regularização é uma técnica utilizada para evitar o overfitting, que ocorre quando um modelo acaba sendo muito complexo e memoriza os dados de treinamento em vez de aprender padrões que possam ser generalizados para novos dados. Assim, a regularização serve para deixar o modelo mais simples e atingir o objetivo de ter um modelo equilibrado entre underfitting e overfitting. Para realizar esse processo, existem diferentes modelos de regularização, tais como: Subset Selection; Forward e Backward Stepwise Selection; Shrinkage: Ridge Regression; Shrinkage: Lasso Regression.
 
 
