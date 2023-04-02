@@ -1,9 +1,13 @@
 # TG-EDUCACAO
 Trabalho em Grupo realizado para a disciplina de Tópicos Especiais em Marketing II 
 
-Objetivo do trabalho: estimar o potencial de mercado para novos negócios no ambito da educação nos municípios brasileiros
+Objetivo do trabalho: estimar o potencial de mercado para novos negócios no ambito da educação nos municípios brasileiros.
 
-Primeira etapa do trabalho: realizar a coleta, a limpeza, o pre-processamento e a análise exploratória da base de dados referente à dimensão EDUCAÇÃO. 
+Para atingir o objetivo do trabalho a estratégia de análise de dados utilizada foi utilizar o conceito de oferta X demanda. Assim, analisou-se a quantidade de estudantes que frequentam e não frequentam creches e pré-escolas (população total de crianças de 0 a 6 anos) em relação a quantidade de matrículas em creches e pré escolas (em tempo integral e parcial). Com isso, foi possível estabelecer um "ranking" dos municípios que apresentam oportunidades para a inserção de novas creches ou pré-escolas.
+
+Optou-se por realizar esse estudo com as escolas de educação infantil pois é mais tangível e assertivo fazer a estimatia de mercado, já que o público desses estabelecimentos de estudos é definido, diferente, por exemplo, de universidades, que podem ter pessoas de diferentes idades realizando um curso superior. Para a segmentação do público de creches e pré-escolas usou-se a seguinte definição da constutuição federal: De acordo com o que a Constituição Federal e a LDB da Educação Nacional definiram as creches são para crianças de 0 a 3 anos de idade e as pré-escolas são para crianças de 4 a 6 anos de idade.
+
+
 
 # Coleta e Limpeza de Dados
 
@@ -11,9 +15,34 @@ Para a primeira entrega do trabalho, reunimos os dados do censo de 2010 coletado
 
 Para a segunda entrega, foi entendido a necessidade de dados mais atuais para uma análise mais certeira. Os novos dados foram coletados da base do FNDE (https://www.fnde.gov.br/index.php/financiamento/fundeb/area-para-gestores/dados-estatisticos/item/13254-2020-com-base-na-portaria-interministerial-n%C2%BA-04,-de-27-12-2019). Desta vez, os dados foram baixados em pdf e convertidos em xls para serem limpos no excel - os dados foram conferidos para garantir que não houve alterações durante a conversão. Células que continham números e estavam em formato de texto foram modificados para 'número' e pontos (.) foram transformados em vírgulas (,) para uniformização dos dados. Por fim, os novos dados foram acrescentados a base antiga de dados para aperfeiçoar a análise.
 
-É importante destacar que, por mais que os novos dados sejam semelhantes aos dados antigos, julgamos diferenças suficientes neles para manter as duas bases no código. Por exemplo, enquanto a primeira base separava os individuos por idade, a nova base os separa por nível educacional.
+Realizou-se também alguns agrupamentos de dados, a fim de tornar a análise mais simples, reduzindo o trade-off entre a interpretabilidade e acurácia, para deixar o modelo mais simples. Um exemplo de agrupamento pode ser visualizado a seguir:
 
 Para maior entendimento dos dados:
 Jovens - Indivíduos de até 19 anos;
 Adultos - Indivíduos com idade entre 20 até 59 anos;
 Idosos - Indivíduos de 60 anos em diante.
+
+
+Por fim, depois de definida a estratégia de análise que leva em consideração o potencial de mercado para novas creches e pré-escolas em municípios brasileiros agregou-se mais dados que dizem respeito a características socioêconomicas de cada munícios brasileiro, como os índices de Desenvolvimento Humano Municipal (em uma perspetiva de renda, educação e geral) e também sobre o Produto Interno Bruto de cada cidade brasileira (geral e per capita), que é um importante indicador sobre a geração de riquezas de cada município.
+
+É importante destacar que, por mais que os novos dados sejam semelhantes aos dados antigos, e que tenhamos adicionado mais variáveis ao longo da contrução do modelo, julgamos que existam diferenças suficientes neles para manter essas bases no código. Por exemplo, enquanto a primeira base separava os individuos por idade, a nova base os separa por nível educacional. O que gera uma complementariedade de informações e torna o modelo mais completo.
+
+Vale ressaltar que todas as bases utilizadas levam em consideração todos os municípios brasileiros participantes do censo. Em algumas variáveis nã foi possível conseguir informações de 100% dos municípios presentes na base, nesses casos foi colocado o valor "0" em vez de deixar essa informação em branco ou com algum outro caracter, para que a coluna que contenha essa variável possa ser importada com sucesso e no formato correto (float).
+
+# Análise Exploratória
+
+Após levantar a base de dados utilizada na contrução do modelo, realizou-se outra importante etapa do processo que é a de Análises descritivas e exploratórias. Essa etapa tem como objetivo explorar e entender os dados disponíveis, antes de aplicar técnicas de modelagem ou análise mais complexas.
+
+As análises descritivas são importantes para se ter uma visão geral dos dados, identificar possíveis problemas, erros ou inconsistências nos dados, além de auxiliar na escolha das técnicas apropriadas para análises futuras. Já as análises exploratórias permitem descobrir relações e padrões nos dados, o que ajuda a formular hipóteses iniciais que serão testadas posteriormente. 
+
+Entre as técnicas utilizadas na EDA no trabalho estão: estatística descritiva, visualização de dados, identificação outliers, correlação entre variáveis, entre outras.
+
+# Seleção de Modelos
+
+Por fim, a última etapa do trabalho consiste em aplicar os conceitos vistos na prática ao longo do semestre, como: seleção de modelos, regularização e reamostragem. Essa é uma importante etapa do projeto que serve para melhorar a precisão e o desempenho do modelos desenvolvido.
+
+
+
+
+
+
