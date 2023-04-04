@@ -63,7 +63,7 @@ Para chegar ao ranking das 10 melhores cidades para abrir uma creche ou pré-esc
 - Cidades que 100% das crianças estão matriculadas;
 - Cidades com menos de 1000 crianças (população total).
 
-Sendo assim, chegamos ao seguinte resultados:
+Sendo assim, chegamos ao seguinte ranking dos 10 melhores municípios
 
 <img width="577" alt="Captura de Tela 2023-04-03 às 21 45 08" src="https://user-images.githubusercontent.com/120071103/229657412-c2de3384-0e9e-4a15-b6bc-c1cd1d632124.png">
 
