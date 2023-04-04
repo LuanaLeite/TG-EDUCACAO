@@ -41,10 +41,38 @@ Entre as técnicas utilizadas na EDA no trabalho estão: estatística descritiva
 
 Por fim, a última etapa do trabalho consiste em aplicar os conceitos vistos na prática ao longo do semestre, como: seleção de modelos, regularização e reamostragem. Essa é uma importante etapa do projeto que serve para melhorar a precisão e o desempenho do modelos desenvolvido.
 
-A seleção de modelos consiste em escolher o modelo mais adequado para um determinado problema de negócio, considerando os dados disponíveis, essa etapa geralmente envolve o treinamento de modelos diferentes e a comparação de suas métricas de desempenho, sempre levando em consideração a relação entre acuracia e interpretabilidade para chegar em um modelo balanceado, já que não há um modelo ideal e padrão. Assim, para o nosso trabalho o modelo escolhido foi o de regressão, visto que as varáiveis que estamos analisando são quantitativas e este é o modelo mais utilizado.
+Como primeira parte, realizamos a etapa de a regularização, que é uma técnica utilizada para evitar o overfitting, que ocorre quando um modelo acaba sendo muito complexo e memoriza os dados de treinamento em vez de aprender padrões que possam ser generalizados para novos dados. Assim, a regularização serve para deixar o modelo mais simples e atingir o objetivo de ter um modelo equilibrado entre underfitting e overfitting. Para realizar esse processo, existem diferentes modelos de regularização, tais como: Subset Selection; Forward e Backward Stepwise Selection; Shrinkage: Ridge Regression; Shrinkage: Lasso Regression.
 
-Já a reamostragem é uma técnica utilizada para extrair o máximo possível da amostra que temos disponível, sendo possível avaliar o desempenho de um modelo em dados que não foram usados para treiná-lo. Assim, é possóvel ter múltiplas performances da amostra para definir um modelo mais assertivo. Existem diferentes técnicas de reamostragem que permitem estimar a precisão do modelo em dados não observados, tais como: Cross-validation (Validation set, Leave-One-Out (LOOCV) e k-Fold) e Bootstrap. Vale ressaltar que a reamostragem também é utilizada  para ajustar hiperparâmetros do modelo.
+A metodologia de seleção de variáveis utilizada no nosso modelo foi a de Stepwise Regression - é uma técnica utilizada para selecionar as variáveis que devem ser incluídas em um modelo de regressão múltipla. A seleção de variáveis é feita em duas etapas: a primeira é adicionar variáveis ao modelo uma de cada vez, e a segunda é remover variáveis que não contribuem significativamente para o modelo. A Stepwise Regression ajuda a evitar a inclusão de variáveis desnecessárias ou irrelevantes no modelo, o que pode melhorar a precisão das previsões e tornar o modelo mais interpretável.
 
-Por fim, a regularização é uma técnica utilizada para evitar o overfitting, que ocorre quando um modelo acaba sendo muito complexo e memoriza os dados de treinamento em vez de aprender padrões que possam ser generalizados para novos dados. Assim, a regularização serve para deixar o modelo mais simples e atingir o objetivo de ter um modelo equilibrado entre underfitting e overfitting. Para realizar esse processo, existem diferentes modelos de regularização, tais como: Subset Selection; Forward e Backward Stepwise Selection; Shrinkage: Ridge Regression; Shrinkage: Lasso Regression.
+As formas de executar essa seleção são: Forward Selection começa com um modelo vazio e adiciona variáveis uma de cada vez, selecionando a variável que apresenta o menor valor p. Já a Backward Elimination começa com todas as variáveis no modelo e remove uma variável por vez, selecionando a variável que apresenta o maior valor p.
+
+Para o nosso modelo, utilizamos a seleção de variáveis usando o modelo foward selecition e Backward Elimination. Obtivemos um melhor desempenho de R ao quadrado no modelo Backward Elimination.
+
+Já a seleção de modelos consiste em escolher o modelo mais adequado para um determinado problema de negócio, considerando os dados disponíveis, essa etapa geralmente envolve o treinamento de modelos diferentes e a comparação de suas métricas de desempenho, sempre levando em consideração a relação entre acurácia e interpretabilidade para chegar em um modelo balanceado, já que não há um modelo ideal e padrão. Assim, para o nosso trabalho o modelo escolhido foi o de regressão, visto que as variáveis que estamos analisando são quantitativas e este é o modelo mais utilizado.
+
+Regressões podem ser utilizadas para lançar luz acerca dos determinantes exóge- nos dos escores, bem como para corrigir tais estimativas e obter rankings ajustados pela influência desses fatores ambientais (por exemplo, as condições socioeconômicas locais, que estão fora do controle dos gestores locais no curto prazo) (IPEA, 2014).
+
+Por fim, a reamostragem é uma técnica utilizada para extrair o máximo possível da amostra que temos disponível, sendo possível avaliar o desempenho de um modelo em dados que não foram usados para treiná-lo. Assim, é possível ter múltiplas performances da amostra para definir um modelo mais assertivo. Existem diferentes técnicas de reamostragem que permitem estimar a precisão do modelo em dados não observados, tais como: Cross-validation (Validation set, Leave-One-Out (LOOCV) e k-Fold) e Bootstrap. Vale ressaltar que a reamostragem também é utilizada para ajustar hiperparâmetros do modelo.
+
+Nesse caso, usamos a técnica de Cross-Validation – Validation Set, visto que a nossa amostra de dados contém um número significativo de observações, não sendo necessário ter uma validação mais detalhada, demorada e custosa do nosso algoritmo.
+
+# Resultados
+Para chegar ao ranking das 10 melhores cidades para abrir uma creche ou pré-escola foi necessário ignorar algumas cidades para uma análise mais precisa, seguindo os critérios:
+- Cidades que IDHM = zero;
+- Cidades que 100% das crianças estão matriculadas;
+- Cidades com menos de 1000 crianças (população total).
+
+Sendo assim, chegamos ao seguinte resultados:
+
+<img width="577" alt="Captura de Tela 2023-04-03 às 21 45 08" src="https://user-images.githubusercontent.com/120071103/229657412-c2de3384-0e9e-4a15-b6bc-c1cd1d632124.png">
+
+
+
+# Limitações do projeto
+Como limitações do projeto, entendemos os seguintes pontos:
+- Dados  atualizados de educação
+- Dificuldade de encontrar outros fatores que influenciam na educação
+- Variáveis selecionadas tem um baixo grau de explicação da variável dependente
 
 
